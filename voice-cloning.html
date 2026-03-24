@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="Easily clone your voice for your digital twin using Twwinz.com. Ingest existing podcasts and videos for flawless zero-friction sovereign voice identity." />
+    <title>Twwinz.com | Voice Cloning Infrastructure</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error": "#ffb4ab",
+                        "surface-container": "#201f1f",
+                        "secondary": "#a2e7ff",
+                        "on-secondary-fixed-variant": "#004e5f",
+                        "surface-dim": "#131313",
+                        "on-secondary": "#003642",
+                        "secondary-container": "#00d2fd",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#001f27",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-tertiary-container": "#4c1a00",
+                        "secondary-fixed-dim": "#3cd7ff",
+                        "surface-bright": "#393939",
+                        "surface-variant": "#353534",
+                        "secondary-fixed": "#b4ebff",
+                        "on-tertiary-fixed": "#351000",
+                        "tertiary-container": "#ef6719",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary": "#002e69",
+                        "inverse-primary": "#005bc1",
+                        "outline-variant": "#414755",
+                        "surface-tint": "#adc6ff",
+                        "primary-container": "#4b8eff",
+                        "on-primary-fixed-variant": "#004493",
+                        "on-background": "#e5e2e1",
+                        "on-primary-container": "#00285c",
+                        "primary": "#adc6ff",
+                        "background": "#131313",
+                        "on-secondary-container": "#005669",
+                        "tertiary-fixed": "#ffdbcc",
+                        "tertiary": "#ffb595",
+                        "surface-container-highest": "#353534",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary": "#571e00",
+                        "surface-container-low": "#1c1b1b",
+                        "on-surface": "#e5e2e1",
+                        "primary-fixed": "#d8e2ff",
+                        "surface": "#131313",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#7c2e00",
+                        "outline": "#8b90a0",
+                        "on-error-container": "#ffdad6",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-fixed-dim": "#ffb595",
+                        "on-surface-variant": "#c1c6d7",
+                        "on-primary-fixed": "#001a41",
+                        "surface-container-high": "#2a2a2a"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(173, 198, 255, 0.1);
+        }
+
+        .primary-gradient {
+            background: linear-gradient(135deg, #ADC6FF 0%, #4B8EFF 100%);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 20px rgba(173, 198, 255, 0.3);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="selection:bg-primary selection:text-on-primary overflow-x-hidden">
+    <!-- TopAppBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-[#131313]/60 backdrop-blur-xl border-b border-white/5 shadow-2xl shadow-blue-500/5">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-blue-400 font-['Space_Grotesk']">Twwinz.com</a>
+            <div class="hidden md:flex items-center space-x-8 font-['Space_Grotesk'] font-medium tracking-tight">
+                <a class="text-slate-400 hover:text-white transition-colors" href="index.html#platform">Platform</a>
+                <a class="text-slate-400 hover:text-white transition-colors" href="index.html#technology">Technology</a>
+                <a class="text-slate-400 hover:text-white transition-colors" href="index.html#security">Security</a>
+                <a class="text-slate-400 hover:text-white transition-colors" href="index.html#pricing">Pricing</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="https://assets.cdn.filesafe.space/9TKh7JGFQXrmzx2AB0HI/media/69c208543b3a5825f8195434.pdf" target="_blank" class="hidden lg:block px-4 py-2 text-slate-400 hover:text-white transition-colors text-sm font-medium">Investor Deck</a>
+                <button
+                    class="primary-gradient text-on-primary px-6 py-2.5 rounded-md font-bold text-sm tracking-tight active:scale-95 transition-transform">
+                    Deploy Your Twin
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main class="min-h-screen pt-32 pb-20 px-8 relative">
+    <!-- Background Texture -->
+    <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+        <div class="absolute top-[-10%] right-[10%] w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px]"></div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-20">
+            <div class="inline-flex items-center gap-2 text-primary mb-6">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mic</span>
+                <span class="text-xs font-bold uppercase tracking-widest">Sovereign Voice Identity</span>
+            </div>
+            <h1 class="font-headline text-[3.5rem] font-bold text-glow mb-6 leading-tight">Zero-Friction<br/><span class="text-primary">Voice Cloning</span></h1>
+            <p class="text-xl text-on-surface-variant leading-relaxed">
+                Replicate your vocal identity with flawless precision. Built on top of enterprise-grade audio infrastructures like ElevenLabs to power a 24/7 digital presence.
+            </p>
+        </div>
+        
+        <!-- Content Grid -->
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+            <div class="space-y-8">
+                <div>
+                    <h3 class="font-headline text-2xl font-bold mb-3">Cloned Directly From Your Public Presence</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        For established creators, generating a high-fidelity voice clone requires virtually zero active effort. Our systems can ingest high-quality audio from your existing YouTube videos, podcasts, and interviews. We securely pipe this via our integrations to train an authentic vocal model in minutes.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-headline text-2xl font-bold mb-3">Powered by the Best-in-Class</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        IdentityOS seamlessly wraps world-class TTS engines (like ElevenLabs) within our Sovereign AI structure. You get access to ultra-realistic inflection, breathing, and emotional pacing, ensuring your audience feels they are conversing with the real you.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="glass-card p-12 rounded-3xl relative overflow-hidden group">
+                <div class="absolute inset-0 bg-primary/5 rounded-3xl group-hover:bg-primary/10 transition-colors"></div>
+                <div class="relative z-10 flex flex-col items-center justify-center text-center">
+                    <div class="w-24 h-24 rounded-full bg-surface-container-high border-2 border-primary/30 flex items-center justify-center mb-8 relative">
+                        <div class="absolute inset-0 bg-primary/20 rounded-full animate-ping opacity-50"></div>
+                        <span class="material-symbols-outlined text-4xl text-primary" data-icon="graphic_eq">graphic_eq</span>
+                    </div>
+                    <h4 class="font-headline text-xl font-bold mb-2">Analyzing Vocal Patterns...</h4>
+                    <p class="text-sm text-slate-500 max-w-xs">Ingesting 3 hours of podcast audio. Extracting cadence, pitch, and timbre parameters.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Use Cases -->
+        <h2 class="font-headline text-[2.5rem] font-bold text-center mb-12">Omnichannel Voice Applications</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-surface-container-low p-8 rounded-2xl border border-white/5 hover:border-primary/30 transition-colors pointer-events-none">
+                <span class="material-symbols-outlined text-3xl text-secondary mb-6" data-icon="call">call</span>
+                <h4 class="font-headline text-lg font-bold mb-3">Inbound Call Agents</h4>
+                <p class="text-sm text-slate-400">Deploy your voice as an AI concierge for high-ticket coaching, real estate, or enterprise-scale lead qualification over phone lines.</p>
+            </div>
+            <div class="bg-surface-container-low p-8 rounded-2xl border border-white/5 hover:border-primary/30 transition-colors pointer-events-none">
+                <span class="material-symbols-outlined text-3xl text-primary mb-6" data-icon="podcasts">podcasts</span>
+                <h4 class="font-headline text-lg font-bold mb-3">Infinite Podcasts</h4>
+                <p class="text-sm text-slate-400">Generate serialized audio content, newsletters, and localized translated shows automatically without stepping into a studio.</p>
+            </div>
+            <div class="bg-surface-container-low p-8 rounded-2xl border border-white/5 hover:border-primary/30 transition-colors pointer-events-none">
+                <span class="material-symbols-outlined text-3xl text-tertiary mb-6" data-icon="record_voice_over">record_voice_over</span>
+                <h4 class="font-headline text-lg font-bold mb-3">Video Voiceovers</h4>
+                <p class="text-sm text-slate-400">Sync your custom vocal model with your TikTok and Shorts production workflow to scale short-form content exponentially.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <!-- Footer -->
+    <footer class="w-full py-12 border-t border-white/5 bg-[#0E0E0E]">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-8">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <div class="text-lg font-bold text-white font-['Space_Grotesk'] tracking-tighter">Twwinz.com</div>
+                <p class="font-['Inter'] text-sm text-slate-500 mb-1">© 2026 Twwinz.com. Powered by MCP.</p>
+                <a href="mailto:hello@twwinz.com" class="font-['Inter'] text-sm text-slate-400 hover:text-white transition-colors">hello@twwinz.com</a>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8">
+                <a class="text-slate-500 hover:text-blue-300 transition-colors text-sm" href="privacy-policy.html">Privacy Policy</a>
+                <a class="text-slate-500 hover:text-blue-300 transition-colors text-sm" href="terms-of-service.html">Terms of Service</a>
+                <a class="text-slate-500 hover:text-blue-300 transition-colors text-sm" href="#">Security Vault</a>
+                <a class="text-slate-500 hover:text-blue-300 transition-colors text-sm" href="investor-relations.html">Investor Relations</a>
+            </div>
+            <div class="flex gap-4">
+                <div
+                    class="px-3 py-1 rounded bg-white/5 border border-white/10 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                    System Status: Operational
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
