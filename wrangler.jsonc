@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "faninteraction-new",
@@ -10,16 +9,3 @@
     "enabled": true
   }
 }
-=======
-{
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "faninteraction-new",
-  "compatibility_date": "2026-03-23",
-  "assets": {
-    "directory": "."
-  },
-  "observability": {
-    "enabled": true
-  }
-}
->>>>>>> Stashed changes
